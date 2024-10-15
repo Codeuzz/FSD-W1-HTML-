@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Exercice Intégration Jour 2</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <img id="chips-logo" src="src/bol-chips.png" alt="">
+            <div>
+                <a href="#accueil">Accueil</a>
+                <a href="#formulaire">Formulaire</a>
+                <a href="#footer">Footer</a>
+            </div>
+            
+        </nav>
+        <h1>Manger des chips🥔</h1>
+
+    </header>
+
+    <article>
+        <h2>Les Chips</h2>
+        <p><strong>Les Chips:</strong> <dfn>Mince rondelle de pomme de terre frite (surtout au pluriel). <br> On dit qu'il ne faut pas en abuser!</dfn></p>
+        <figure>
+            <img id="big-chips" src="src/chips.jpg" alt="Image de chips">
+            <figcaption>Un magnifique paquet de chips</figcaption>
+        </figure>
+    </article>
+
+    <h2>Formulaire</h2>
+    <form>
+        <fieldset>
+            <label for="">
+                Entrez votre nom:
+                <input required type="text" placeholder="Nom">
+            </label>
+        </fieldset>
+        <fieldset>
+            <label for="">
+                Entrez votre prénom:
+                <input required type="text" placeholder="Prénom">
+            </label>
+        </fieldset>
+        <fieldset>
+            <label for="">
+                Entrez votre nom:
+                <input required type="number" placeholder="Numéro de téléphone" pattern="/^((\+)33|0|0033)[1-9](\d{2}){4}$/g">
+            </label>
+        </fieldset>
+        <fieldset >
+            <legend>Mangez-vous souvent des Chips ?</legend>
+            <label for="oui-btn">
+                <input id="oui-btn" type="radio" type="text" name="radio-btn"></input>Oui
+            </label>
+            <label for="non-btn">
+                <input id="non-btn" type="radio" type="text" name="radio-btn"></input>Non
+            </label>
+        </fieldset>
+        
+        <fieldset>
+            <label> Racontez-nous votre meilleure expérience autour d'un délicieux paquet de chips:
+                <textarea rows="5" placeholder="Entrez votre réponse..."></textarea>   
+            </label>
+        </fieldset>
+
+        <button type="submit">Envoyer</button>
+    </form>
+
+    <footer>
+        <p>Auteur: Jaime Chips</p>
+        <p><a href="mailto:JaimeChips@gmail.com">JaimeChips@gmail.com</a></p>
+      </footer>
+    
+</body>
+</html>
