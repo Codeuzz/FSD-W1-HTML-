@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulaire Ergonomique et Accessible</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <form  class="form-container">
+    <h1>Formulaire de Contact</h1>
+
+    <div class="form-group">
+      <label for="name">Nom complet <span aria-hidden="true">*</span></label>
+      <input type="text" id="name" name="name" required aria-required="true" placeholder="Entrez votre nom">
+      <span class="error-message" aria-live="polite">Veuillez entrer votre nom complet.</span>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Adresse e-mail <span aria-hidden="true">*</span></label>
+      <input type="email" id="email" name="email" required aria-required="true" placeholder="Entrez votre adresse e-mail">
+      <span class="error-message" aria-live="polite">Veuillez entrer votre nom complet.</span>
+    </div>
+
+    <div class="form-group">
+      <label for="birthdate">Date de naissance <span aria-hidden="true">*</span></label>
+      <input type="date" id="birthdate" name="birthdate" required aria-required="true">
+      <span class="error-message" aria-live="polite">Veuillez entrer votre date de naissance.</span>
+    </div>
+
+    <div class="form-group">
+      <label for="password">Mot de passe <span aria-hidden="true">*</span></label>
+      <input 
+        type="password" 
+        id="password" 
+        name="password" 
+        required 
+        aria-required="true" 
+        placeholder="Entrez un mot de passe" 
+        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+      >
+      <span class="error-message" aria-live="polite">
+        Votre mot de passe doit contenir au moins 8 caractères, avec au moins une majuscule, une minuscule, et un chiffre.
+      </span>
+    </div>
+
+    <div class="form-group">
+      <label for="phone">Numéro de téléphone</label>
+      <input type="tel" id="phone" name="phone" placeholder="Entrez votre numéro de téléphone">
+    </div>
+
+    <div class="form-group">
+      <label for="options">Sélectionnez une option <span aria-hidden="true">*</span></label>
+      <select id="options" name="options" required aria-required="true">
+        <option value="">Choisir...</option>
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+      </select>
+      <span class="error-message" aria-live="polite">Veuillez entrer votre nom complet.</span>
+    </div>
+
+    <fieldset>
+      <legend>Genre <span aria-hidden="true">*</span></legend>
+      <label for="male">
+        <input type="radio" id="male" name="gender" value="male" required> Homme
+      </label>
+      <label for="female">
+        <input type="radio" id="female" name="gender" value="female"> Femme
+      </label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Choisissez vos abonnements</legend>
+      <label>
+        <input type="checkbox" name="newsletter" value="news"> Abonnement à la newsletter
+      </label>
+      <label>
+        <input type="checkbox" name="updates" value="updates"> Recevoir les mises à jour
+      </label>
+    </fieldset>
+
+    <div class="form-group">
+      <label for="comments">Commentaires</label>
+      <textarea id="comments" name="comments" rows="4" placeholder="Écrivez vos commentaires ici..."></textarea>
+    </div>
+
+    <button type="submit">Envoyer</button>
+
+  </form>
+  <script>
+   const password = document.getElementById('password')
+    password.addEventListener('input', () => {
+        console.log(password.value)
+    })
+  </script>
+</body>
+</html>
